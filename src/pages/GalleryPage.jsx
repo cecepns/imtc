@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Search, X } from 'lucide-react';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
@@ -78,6 +79,37 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Training Gallery - Photos & Activities | IMTC Global</title>
+        <meta name="description" content="Explore IMTC Global training gallery showcasing our training activities, state-of-the-art facilities, and successful programs. See our hands-on maritime and OHS safety training in action." />
+        <meta name="keywords" content="training gallery, IMTC photos, maritime training facilities, OHS training activities, safety training images, training center Indonesia" />
+        <link rel="canonical" href="https://imtc-global.com/gallery" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Training Gallery - IMTC Global" />
+        <meta property="og:description" content="Explore our training activities, facilities, and successful programs in pictures." />
+        <meta property="og:url" content="https://imtc-global.com/gallery" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:title" content="Training Gallery - IMTC Global" />
+        <meta name="twitter:description" content="Explore our training activities, facilities, and successful programs in pictures." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "IMTC Global Training Gallery",
+            "description": "Photo gallery of our training activities and facilities",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "IMTC Global"
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}

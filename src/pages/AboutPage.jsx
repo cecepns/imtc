@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { CircleCheck as CheckCircle, Target, Eye, Users, Award, Globe } from 'lucide-react';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
@@ -25,6 +26,41 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>About IMTC Global - Leading Maritime & OHS Training Provider</title>
+        <meta name="description" content="IMTC Global is a certified training provider with 5+ years experience in Occupational Health and Safety (K3) for maritime and heavy industries. Trusted by 1000+ professionals across Indonesia." />
+        <meta name="keywords" content="about IMTC, maritime training center, OHS training provider, K3 certification, safety training Indonesia, maritime safety education" />
+        <link rel="canonical" href="https://imtc-global.com/about" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="About IMTC Global - Leading Maritime Training Provider" />
+        <meta property="og:description" content="5+ years of experience in providing professional Occupational Health and Safety training for maritime and heavy industries." />
+        <meta property="og:url" content="https://imtc-global.com/about" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:title" content="About IMTC Global - Leading Maritime Training Provider" />
+        <meta name="twitter:description" content="5+ years of experience in providing professional Occupational Health and Safety training for maritime and heavy industries." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "mainEntity": {
+              "@type": "EducationalOrganization",
+              "name": "IMTC Global",
+              "description": "Leading Maritime Training Center providing professional Occupational Health and Safety (OHS) training",
+              "foundingDate": "2018",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Indonesia"
+              }
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}

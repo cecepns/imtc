@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Search,
   ListFilter as Filter,
@@ -99,6 +100,37 @@ const TrainingsPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Training Programs - Maritime & OHS Safety Training | IMTC Global</title>
+        <meta name="description" content="Explore 50+ professional OHS training programs including General K3, Maritime K3, Fire Safety, and Scaffolding Supervisor certifications. Internationally recognized and government accredited." />
+        <meta name="keywords" content="training programs, maritime training courses, OHS certification, K3 training programs, safety courses Indonesia, maritime safety courses, scaffolding training" />
+        <link rel="canonical" href="https://imtc-global.com/trainings" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Training Programs - Maritime & OHS Safety Training" />
+        <meta property="og:description" content="Explore 50+ professional OHS training programs. Internationally recognized and government accredited certifications." />
+        <meta property="og:url" content="https://imtc-global.com/trainings" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:title" content="Training Programs - Maritime & OHS Safety Training" />
+        <meta name="twitter:description" content="Explore 50+ professional OHS training programs. Internationally recognized and government accredited certifications." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Training Programs",
+            "description": "Professional Occupational Health and Safety training programs",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "IMTC Global"
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}

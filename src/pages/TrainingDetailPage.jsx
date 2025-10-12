@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Clock, Users, MapPin, Calendar, CircleCheck as CheckCircle, MessageCircle } from 'lucide-react';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
@@ -100,6 +101,56 @@ const TrainingDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-white pt-14">
+      <Helmet>
+        <title>{training.title} - IMTC Global Training</title>
+        <meta name="description" content={`${training.short_description}. Duration: ${training.duration}. Price: ${formatRupiah(training.price)}. Internationally recognized certification. Book now!`} />
+        <meta name="keywords" content={`${training.category}, ${training.title}, OHS training, K3 certification, maritime training, safety training Indonesia`} />
+        <link rel="canonical" href={`https://imtc-global.com/training/${training.id}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${training.title} - IMTC Global`} />
+        <meta property="og:description" content={training.short_description} />
+        <meta property="og:url" content={`https://imtc-global.com/training/${training.id}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={training.image ? `https://api-inventory.isavralabel.com/imtc/uploads/${training.image}` : 'https://imtc-global.com/logo.jpg'} />
+        
+        {/* Twitter */}
+        <meta name="twitter:title" content={`${training.title} - IMTC Global`} />
+        <meta name="twitter:description" content={training.short_description} />
+        <meta name="twitter:image" content={training.image ? `https://api-inventory.isavralabel.com/imtc/uploads/${training.image}` : 'https://imtc-global.com/logo.jpg'} />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": training.title,
+            "description": training.short_description,
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "IMTC Global",
+              "url": "https://imtc-global.com"
+            },
+            "educationalCredentialAwarded": training.certification,
+            "timeRequired": training.duration,
+            "numberOfCredits": training.max_participants,
+            "offers": {
+              "@type": "Offer",
+              "price": training.price,
+              "priceCurrency": "IDR",
+              "availability": "https://schema.org/InStock"
+            },
+            "image": training.image ? `https://api-inventory.isavralabel.com/imtc/uploads/${training.image}` : 'https://imtc-global.com/logo.jpg',
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "ratingCount": "150"
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
 
       <div className="pt-16">

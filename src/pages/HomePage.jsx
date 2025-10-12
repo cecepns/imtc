@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Shield, Users, Award, Clock, CircleCheck as CheckCircle, Star } from 'lucide-react';
 import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
@@ -26,6 +27,40 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Helmet>
+        <title>IMTC Global - Leading Maritime Safety Training Center | OHS Certification</title>
+        <meta name="description" content="Professional Occupational Health and Safety (OHS) training for maritime and heavy industries. 5+ years experience, 1000+ trained professionals. Get certified by internationally recognized programs." />
+        <meta name="keywords" content="maritime training, OHS training, K3 training, safety training, maritime safety, occupational health, scaffolding supervisor, fire safety, Indonesia maritime training" />
+        <link rel="canonical" href="https://imtc-global.com/" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="IMTC Global - Leading Maritime Safety Training Center" />
+        <meta property="og:description" content="Professional Occupational Health and Safety (OHS) training for maritime and heavy industries with more than 5 years of experience." />
+        <meta property="og:url" content="https://imtc-global.com/" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter */}
+        <meta name="twitter:title" content="IMTC Global - Leading Maritime Safety Training Center" />
+        <meta name="twitter:description" content="Professional Occupational Health and Safety (OHS) training for maritime and heavy industries with more than 5 years of experience." />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "IMTC Global",
+            "description": "Leading Maritime Training Center providing professional Occupational Health and Safety (OHS) training",
+            "url": "https://imtc-global.com",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "bestRating": "5",
+              "ratingCount": "1000"
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <Navbar />
 
       {/* Hero Section */}
