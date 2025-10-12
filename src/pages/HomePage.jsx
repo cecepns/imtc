@@ -64,7 +64,7 @@ const HomePage = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-secondary-600 to-secondary-800 text-white pt-16">
+      <section className="h-screen md:h-auto flex flex-col items-center justify-center relative bg-gradient-to-br from-secondary-600 to-secondary-800 text-white pt-16">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center" data-aos="fade-up">
