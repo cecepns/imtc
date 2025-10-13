@@ -43,14 +43,6 @@ const AdminLogin = () => {
       <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
         {/* Logo */}
         <div className="text-center mb-8">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="relative">
-              <Anchor className="h-10 w-10 text-primary-500" />
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-secondary-500 rounded-full"></div>
-              <div className="absolute top-2 -right-2 w-3 h-3 bg-accent-500 rounded-full"></div>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">IMTC Global</span>
-          </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Admin Login</h1>
           <p className="text-gray-600">Sign in to access admin dashboard</p>
         </div>
