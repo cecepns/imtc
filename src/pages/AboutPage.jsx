@@ -97,13 +97,10 @@ const AboutPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center" data-aos="fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Tentang IMTC Global
+              About IMTC Global
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-secondary-100">
-              Kami berkomitmen untuk mencetak profesional muda yang mempunyai
-              skill dan kompetensi sesuai kebutuhan industri melalui berbagai
-              program pelatihan bersertifikat yang diakui oleh lembaga
-              pemerintah.
+              Leading the way in maritime safety training and professional development.
             </p>
           </div>
         </div>
