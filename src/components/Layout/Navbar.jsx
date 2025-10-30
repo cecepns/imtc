@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Anchor } from "lucide-react";
-import Logo from "../../assets/logo.jpg";
+import Logo from "../../assets/logo.jpeg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-between py-4">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <img src={Logo} className="w-20 h-auto" />
+              <img src={Logo} className="w-24 md:w-44 h-auto" />
             </Link>
           </div>
 

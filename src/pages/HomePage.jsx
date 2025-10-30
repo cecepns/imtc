@@ -72,7 +72,9 @@ const HomePage = () => {
               Leading Maritime Training Center
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-secondary-100">
-              Professional Occupational Health and Safety (OHS) training for maritime and heavy industries with more than 5 years of experience
+            Perusahaan yang bermitra dengan penyedia jasa K3 (PJK3) serta
+                  Tempat Uji Kompetensi (TUK) dari berbagai LSP-BNSP di
+                  Indonesia
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -129,10 +131,10 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Training Services
+              Layanan Kami
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive safety training programs designed to meet international standards and industry needs
+              Pelatihan K3 yang komprehensif dirancang untuk memenuhi standar internasional dan kebutuhan industri
             </p>
           </div>
 
@@ -140,22 +142,22 @@ const HomePage = () => {
             {[
               {
                 icon: <Shield className="h-12 w-12 text-white" />,
-                title: "General OHS Training",
-                description: "Comprehensive certification covering hazard identification, risk assessment, and compliance with safety standards.",
+                title: "Sertifikasi BNSP",
+                description: "Program sertifikasi kompetensi yang mengacu pada Standar Kompetensi Kerja Nasional (SKKNI) dan diterbitkan oleh Badan Nasional Sertifikasi Profesi (BNSP)",
                 gradient: "from-blue-500 to-indigo-600",
                 iconBg: "bg-blue-600"
               },
               {
                 icon: <Users className="h-12 w-12 text-white" />,
-                title: "Maritime OHS Training",
-                description: "Specialized programs for the maritime sector covering ship safety, emergency evacuation, and hazardous materials handling.",
+                title: "Sertifikasi KEMNAKER",
+                description: "Pelatihan dan sertifikasi resmi dari Kementerian Ketenagakerjaan Republik Indonesia (KEMNAKER RI) bagi tenaga kerja yang ingin meningkatkan keahlian di bidang Keselamatan dan Kesehatan Kerja (K3)",
                 gradient: "from-cyan-500 to-blue-600",
                 iconBg: "bg-cyan-600"
               },
               {
                 icon: <Award className="h-12 w-12 text-white" />,
-                title: "Scaffolding Supervisor",
-                description: "Supervisor training in scaffolding assembly, inspection, and safe use according to occupational safety standards.",
+                title: "Kursus Online",
+                description: "Program pembelajaran daring yang menghadirkan berbagai pelatihan terstruktur untuk mempersiapkan peserta mengikuti sertifikasi BNSP atau KEMNAKER",
                 gradient: "from-purple-500 to-indigo-600",
                 iconBg: "bg-purple-600"
               }
@@ -184,10 +186,10 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Featured Training Programs
+              Program Pelatihan Unggulan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our most popular and comprehensive training programs
+            Temukan berbagai program pelatihan terpopuler kami
             </p>
           </div>
 
@@ -261,21 +263,21 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose IMTC Global?
+              Mengapa Memilih IMTC Global Training?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are committed to providing world-class training with proven results
+              Kami berkomitmen memberikan pelatihan berstandar nasional & internasional dengan hasil nyata dan terukur
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4" data-aos="fade-right">
               {[
-                "Certified training programs accredited by government and industry authorities",
-                "Flexible schedules with various training dates and locations",
-                "Expert instructors with years of industry experience",
-                "Customized training solutions for your team's specific needs",
-                "Internationally recognized certifications"
+                "Program pelatihan bersertifikat yang diakui oleh lembaga pemerintah dan otoritas industri",
+                "Jadwal fleksibel dengan berbagai pilihan waktu dan lokasi pelatihan",
+                "Instruktur berpengalaman dengan keahlian dan jam terbang tinggi di dunia industri",
+                "Solusi pelatihan khusus yang dapat disesuaikan dengan kebutuhan tim atau perusahaan anda",
+                "Sertifikasi berstandar internasional yang diakui di tingkat nasional maupun global"
               ].map((feature, index) => (
                 <div key={index} className="flex items-start space-x-4 bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-x-1 border-l-4 border-blue-500">
                   <div className="bg-gradient-to-br from-green-400 to-emerald-500 rounded-full p-1.5 flex-shrink-0">
@@ -294,9 +296,9 @@ const HomePage = () => {
                 <div className="bg-white/20 backdrop-blur-sm w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl border border-white/30">
                   <Star className="h-10 w-10 text-yellow-300" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Excellence in Training</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Keunggulan Pelatihan</h3>
                 <p className="text-blue-100 leading-relaxed text-lg">
-                  More than 5 years of experience in providing high-quality safety training for maritime and heavy industries.
+                  Lebih dari 5 tahun pengalaman dalam memberikan pelatihan keselamatan berkualitas tinggi untuk industri maritim dan industri berat lainnya.
                 </p>
               </div>
               <div className="relative text-center">
@@ -304,7 +306,7 @@ const HomePage = () => {
                   to="/about"
                   className="bg-white hover:bg-gray-100 text-blue-600 px-8 py-3.5 rounded-xl font-bold transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
-                  Learn About Us <ArrowRight className="ml-2 h-5 w-5" />
+                  Pelajari Tentang Kami <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </div>
             </div>
