@@ -351,10 +351,10 @@ const HomePage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Participant Testimonials
+              Testimoni Peserta
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear the experiences of those who have attended our training
+              Simak pengalaman para peserta yang telah mengikuti pelatihan bersama kami
             </p>
           </div>
 
@@ -432,13 +432,13 @@ const HomePage = () => {
           {/* CTA */}
           <div className="text-center mt-16" data-aos="fade-up">
             <p className="text-xl text-gray-700 mb-6 font-medium">
-              Join thousands of professionals who have trusted us
+              Bergabung dengan ribuan profesional yang telah percaya pada kami
             </p>
             <Link
               to="/trainings"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-10 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
-              Register for Training Now <ArrowRight className="ml-2 h-5 w-5" />
+              Daftar Pelatihan Sekarang <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
