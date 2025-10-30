@@ -97,7 +97,7 @@ const AboutPage = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center" data-aos="fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About IMTC Global
+              Tentang IMTC Global
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-secondary-100">
               PT PPSMI/International Maritime Training Center (IMTC) adalah
@@ -118,7 +118,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             <div data-aos="fade-right">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                About IMTC
+                Tentang IMTC
               </h2>
               <div className="prose prose-lg text-gray-700 space-y-4">
                 <p>
@@ -178,12 +178,10 @@ const AboutPage = () => {
             >
               <div className="flex items-center mb-6">
                 <Eye className="h-8 w-8 text-secondary-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-gray-900">Visi Kami</h3>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                To become the leading Occupational Health and Safety (K3)
-                training center in Asia, focusing on enhancing safety skills and
-                awareness for workers in the maritime and heavy industries.
+                Menjadi perusahaan yang mencetak generasi muda yang unggul dari Sabang sampai Merauke, untuk menjadi profesional muda yang punya pengetahuan luas, skill, serta kompetensi baik nasional dan internasional menuju Indonesia emas yang maju dan sejahtera
               </p>
             </div>
 
@@ -195,42 +193,38 @@ const AboutPage = () => {
               <div className="flex items-center mb-6">
                 <Target className="h-8 w-8 text-primary-600 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Our Mission
+                  Misi Kami
                 </h3>
               </div>
               <ul className="text-gray-700 space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-accent-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    Provide high-quality training with international standards
-                    to promote K3 in various industries
+                    Merancang dan melaksanakan program pelatihan yang relevan dengan Standar Kompetensi Kerja Nasional Indonesia (SKKNI) dan kebutuhan industri
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-accent-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    Develop training programs that are relevant to current and
-                    future industry needs
+                    Membekali peserta dengan pengetahuan dan keterampilan praktis untuk lulus uji kompetensi BNSP dan KEMNAKER
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-accent-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    Raise workplace safety awareness through innovative and
-                    effective approaches
+                    Menjalin kolaborasi dengan industri, asosiasi profesi, dan lembaga terkait
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-accent-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    Offer targeted K3 consulting services to help companies
-                    comply with safety regulations
+                    Menyiapkan lulusan yang memiliki kompetensi dan siap bekerja
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-5 w-5 text-accent-500 mr-2 mt-0.5 flex-shrink-0" />
                   <span>
-                    Foster a safety culture at all organizational levels
+                    Mendorong terwujudnya budaya keselamatan kerja di setiap tingkat organisasi
                   </span>
                 </li>
               </ul>
@@ -243,34 +237,34 @@ const AboutPage = () => {
               className="text-3xl font-bold text-gray-900 text-center mb-12"
               data-aos="fade-up"
             >
-              Our Training Services
+              Layanan Pelatihan Kami
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "General K3 Training",
+                  title: "Pelatihan K3 Umum",
                   description:
-                    "Certification in General K3 for workers across various sectors. This training covers hazard identification, risk assessment, and the application of safety standards as per regulations.",
+                    "Sertifikasi K3 Umum untuk tenaga kerja di berbagai sektor. Pelatihan ini mencakup identifikasi bahaya, penilaian risiko, dan penerapan standar keselamatan sesuai peraturan yang berlaku.",
                 },
                 {
-                  title: "Maritime K3 Training",
+                  title: "Pelatihan K3 Maritim",
                   description:
-                    "Special programs for the maritime sector, covering ship safety, emergency evacuation, and handling hazardous materials at sea.",
+                    "Program khusus untuk sektor maritim, mencakup keselamatan kapal, evakuasi darurat, dan penanganan bahan berbahaya di laut.",
                 },
                 {
-                  title: "Scaffold Supervisor Training",
+                  title: "Pelatihan Supervisor Perancah",
                   description:
-                    "Training supervisors in the safe assembly, inspection, and use of scaffolding according to workplace safety standards.",
+                    "Pelatihan supervisor dalam perakitan, inspeksi, dan penggunaan perancah yang aman sesuai standar keselamatan kerja.",
                 },
                 {
-                  title: "Fire Safety Training",
+                  title: "Pelatihan Fire Safety",
                   description:
-                    "A program for managing and preventing workplace fires, including simulations on using fire extinguishers and evacuation procedures.",
+                    "Program untuk mengelola dan mencegah kebakaran di tempat kerja, termasuk simulasi penggunaan alat pemadam kebakaran dan prosedur evakuasi.",
                 },
                 {
-                  title: "K3 Consulting Services",
+                  title: "Layanan Konsultasi K3",
                   description:
-                    "We offer consulting solutions to help companies meet health and safety requirements, including K3 audits and risk evaluations.",
+                    "Kami menawarkan solusi konsultasi untuk membantu perusahaan memenuhi persyaratan kesehatan dan keselamatan, termasuk audit K3 dan evaluasi risiko.",
                 },
               ].map((service, index) => (
                 <div
@@ -294,26 +288,26 @@ const AboutPage = () => {
               className="text-3xl font-bold text-gray-900 text-center mb-12"
               data-aos="fade-up"
             >
-              Frequently Asked Questions
+              Pertanyaan yang Sering Diajukan
             </h2>
             <div className="max-w-4xl mx-auto space-y-6">
               {[
                 {
-                  question: "Does IMTC offer online training?",
+                  question: "Apakah IMTC menawarkan pelatihan online?",
                   answer:
-                    "Yes, we offer online training through our e-learning platform, which you can access anytime from anywhere.",
+                    "Ya, kami menawarkan pelatihan online melalui platform e-learning kami, yang dapat Anda akses kapan saja dari mana saja.",
                 },
                 {
                   question:
-                    "How can I get certified after completing the training?",
+                    "Bagaimana cara saya mendapatkan sertifikat setelah menyelesaikan pelatihan?",
                   answer:
-                    "After finishing the training, participants will take a certification exam. If you pass, an official certificate recognized nationally and internationally will be issued.",
+                    "Setelah menyelesaikan pelatihan, peserta akan mengikuti ujian sertifikasi. Jika lulus, sertifikat resmi yang diakui secara nasional dan internasional akan diterbitkan.",
                 },
                 {
                   question:
-                    "Are IMTC's training programs recognized by the government?",
+                    "Apakah program pelatihan IMTC diakui oleh pemerintah?",
                   answer:
-                    "Yes, all our training programs are accredited by the Ministry of Manpower and international certification bodies.",
+                    "Ya, semua program pelatihan kami terakreditasi oleh Kementerian Ketenagakerjaan dan badan sertifikasi internasional.",
                 },
               ].map((faq, index) => (
                 <div

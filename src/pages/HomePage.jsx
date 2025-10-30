@@ -361,38 +361,17 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Budi Santoso",
-                position: "Safety Officer",
-                rating: 5,
-                testimonial: "The Maritime OHS Training at IMTC Global is very comprehensive and practical. The instructors are highly experienced and the materials taught are very relevant to my work on board. The certification I received is also internationally recognized."
-              },
-              {
-                name: "Siti Nurhaliza",
-                position: "HSE Supervisor",
-                rating: 5,
-                testimonial: "I am very satisfied with the Scaffolding Supervisor training I attended. The facilities are complete, the interactive learning method made me quickly understand the material. The instructor team is very professional and always ready to help."
-              },
-              {
-                name: "Ahmad Wijaya",
-                position: "Operations Manager",
-                rating: 5,
-                testimonial: "IMTC Global is the best OHS training center I have ever visited. The training I attended greatly helped improve my team's competence in managing occupational safety in high-risk offshore environments."
-              },
-              {
                 name: "Fadhel Adha",
-                position: "Professional Trainer",
                 rating: 5,
                 testimonial: "Lembaga pelatihan dan sertifikasi nasional dan internasional dengan trainer yang sangat profesional dan sudah pasti berpengalaman puluhan tahun di bidangnya. Training sangat lengkap dari nasional hingga internasional, trainernya ramah dan gamblang dalam menyampaikan materi jadi mudah ditangkap oleh pesertanya"
               },
               {
                 name: "Yahya Chusnul",
-                position: "HSE Practitioner",
                 rating: 5,
                 testimonial: "Training HSE yg luar biasa kemanfaatannya. Alhamdulillah walaupun tidak sempat mengikuti seluruhnya, tapi sangat menambah wawasan dan pemahaman HSE. Good job IMTC, thank you"
               },
               {
                 name: "Muhammad Bilal",
-                position: "Training Manager",
                 rating: 5,
                 testimonial: "IMTC mampu melangkah jauh kedepan terkait program-program sertifikasi yg ditawarkan baik dari dalam negeri maupun internasional serta konsisten memberikan webinar gratis 5x dalam seminggu. Semoga IMTC semakin baik, maju dan jaya kedepannya. Aamiin"
               }
