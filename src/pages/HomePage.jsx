@@ -6,6 +6,37 @@ import Navbar from '../components/Layout/Navbar';
 import Footer from '../components/Layout/Footer';
 import { trainingAPI } from '../utils/api';
 
+// Helper function to get initials from name
+const getInitials = (name) => {
+  return name
+    .split(' ')
+    .map(word => word.charAt(0))
+    .join('')
+    .toUpperCase()
+    .slice(0, 2);
+};
+
+// Helper function to get a consistent color based on name
+const getColorForInitials = (name) => {
+  const colors = [
+    'bg-gradient-to-br from-blue-500 to-blue-600',
+    'bg-gradient-to-br from-indigo-500 to-indigo-600',
+    'bg-gradient-to-br from-purple-500 to-purple-600',
+    'bg-gradient-to-br from-pink-500 to-pink-600',
+    'bg-gradient-to-br from-green-500 to-green-600',
+    'bg-gradient-to-br from-cyan-500 to-cyan-600',
+    'bg-gradient-to-br from-orange-500 to-orange-600',
+    'bg-gradient-to-br from-red-500 to-red-600'
+  ];
+  
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  
+  return colors[Math.abs(hash) % colors.length];
+};
+
 const HomePage = () => {
   const [featuredTrainings, setFeaturedTrainings] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -332,101 +363,91 @@ const HomePage = () => {
               {
                 name: "Budi Santoso",
                 position: "Safety Officer",
-                // company: "PT Pelayaran Nusantara",
-                image: "https://i.pravatar.cc/150?img=12",
                 rating: 5,
                 testimonial: "The Maritime OHS Training at IMTC Global is very comprehensive and practical. The instructors are highly experienced and the materials taught are very relevant to my work on board. The certification I received is also internationally recognized."
               },
               {
                 name: "Siti Nurhaliza",
                 position: "HSE Supervisor",
-                // company: "PT Konstruksi Megah",
-                image: "https://i.pravatar.cc/150?img=45",
                 rating: 5,
                 testimonial: "I am very satisfied with the Scaffolding Supervisor training I attended. The facilities are complete, the interactive learning method made me quickly understand the material. The instructor team is very professional and always ready to help."
               },
               {
                 name: "Ahmad Wijaya",
                 position: "Operations Manager",
-                // company: "PT Offshore Indonesia",
-                image: "https://i.pravatar.cc/150?img=33",
                 rating: 5,
                 testimonial: "IMTC Global is the best OHS training center I have ever visited. The training I attended greatly helped improve my team's competence in managing occupational safety in high-risk offshore environments."
               },
-              // {
-              //   name: "Dewi Lestari",
-              //   position: "Training Coordinator",
-              //   company: "PT Industri Maritim",
-              //   image: "https://i.pravatar.cc/150?img=47",
-              //   rating: 5,
-              //   testimonial: "We have sent employees for training at IMTC Global several times. The results are always satisfactory. The flexible training schedule and strategic location make it easy to coordinate with our team."
-              // },
-              // {
-              //   name: "Rudi Hartono",
-              //   position: "Site Safety Inspector",
-              //   company: "PT Pembangunan Infrastruktur",
-              //   image: "https://i.pravatar.cc/150?img=68",
-              //   rating: 5,
-              //   testimonial: "The General OHS training materials provided are very detailed and easy to understand. I gained a lot of new knowledge about hazard identification and how to manage risks in the field. Thank you IMTC Global!"
-              // },
-              // {
-              //   name: "Linda Kusuma",
-              //   position: "Safety Engineer",
-              //   company: "PT Energi Nusantara",
-              //   image: "https://i.pravatar.cc/150?img=38",
-              //   rating: 5,
-              //   testimonial: "An amazing training experience! The instructors are not only experts in their field, but they can also deliver the material in an easy-to-understand way. The certificate I received is very useful for my career development."
-              // }
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="group relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
-              >
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/10 to-transparent rounded-bl-full"></div>
-                
-                {/* Quote Icon */}
-                <div className="absolute top-6 right-6 text-blue-200 opacity-50">
-                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                  </svg>
-                </div>
+              {
+                name: "Fadhel Adha",
+                position: "Professional Trainer",
+                rating: 5,
+                testimonial: "Lembaga pelatihan dan sertifikasi nasional dan internasional dengan trainer yang sangat profesional dan sudah pasti berpengalaman puluhan tahun di bidangnya. Training sangat lengkap dari nasional hingga internasional, trainernya ramah dan gamblang dalam menyampaikan materi jadi mudah ditangkap oleh pesertanya"
+              },
+              {
+                name: "Yahya Chusnul",
+                position: "HSE Practitioner",
+                rating: 5,
+                testimonial: "Training HSE yg luar biasa kemanfaatannya. Alhamdulillah walaupun tidak sempat mengikuti seluruhnya, tapi sangat menambah wawasan dan pemahaman HSE. Good job IMTC, thank you"
+              },
+              {
+                name: "Muhammad Bilal",
+                position: "Training Manager",
+                rating: 5,
+                testimonial: "IMTC mampu melangkah jauh kedepan terkait program-program sertifikasi yg ditawarkan baik dari dalam negeri maupun internasional serta konsisten memberikan webinar gratis 5x dalam seminggu. Semoga IMTC semakin baik, maju dan jaya kedepannya. Aamiin"
+              }
+            ].map((testimonial, index) => {
+              const initials = getInitials(testimonial.name);
+              const colorClass = getColorForInitials(testimonial.name);
+              
+              return (
+                <div
+                  key={index}
+                  className="group relative bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/10 to-transparent rounded-bl-full"></div>
+                  
+                  {/* Quote Icon */}
+                  <div className="absolute top-6 right-6 text-blue-200 opacity-50">
+                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                  </div>
 
-                {/* Rating */}
-                <div className="flex mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+                  {/* Rating */}
+                  <div className="flex mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
 
-                {/* Testimonial Text */}
-                <p className="text-gray-600 leading-relaxed mb-6 relative z-10">
-                  &ldquo;{testimonial.testimonial}&rdquo;
-                </p>
+                  {/* Testimonial Text */}
+                  <p className="text-gray-600 leading-relaxed mb-6 relative z-10">
+                    &ldquo;{testimonial.testimonial}&rdquo;
+                  </p>
 
-                {/* Author Info */}
-                <div className="flex items-center space-x-4 relative z-10">
-                  <div className="relative">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-14 h-14 rounded-full object-cover border-2 border-blue-200 group-hover:border-blue-400 transition-colors"
-                    />
-                    <div className="absolute -bottom-1 -right-1 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full p-1.5 shadow-lg">
-                      <CheckCircle className="h-3.5 w-3.5 text-white" />
+                  {/* Author Info */}
+                  <div className="flex items-center space-x-4 relative z-10">
+                    <div className="relative">
+                      <div className={`${colorClass} w-14 h-14 rounded-full flex items-center justify-center border-2 border-blue-200 group-hover:border-blue-400 transition-colors`}>
+                        <span className="text-white font-bold text-lg">{initials}</span>
+                      </div>
+                      <div className="absolute -bottom-1 -right-1 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full p-1.5 shadow-lg">
+                        <CheckCircle className="h-3.5 w-3.5 text-white" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-sm text-gray-600 font-medium">{testimonial.position}</p>
                     </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-gray-600 font-medium">{testimonial.position}</p>
-                    <p className="text-sm text-blue-600 font-medium">{testimonial.company}</p>
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA */}
